@@ -66,6 +66,7 @@ public class TranslateServlet extends HttpServlet{
 			System.out.println(" subscriptionKey = "+subscriptionKey);	
 			
 	        Response responseAPI = client.newCall(requestAPI).execute(); 
+	        System.out.println(" responseAPI = "+responseAPI);	
 				
 			StringBuffer translations= new StringBuffer();
 			try {
@@ -88,22 +89,22 @@ public class TranslateServlet extends HttpServlet{
 					
 					
 					if(languagetype.equals("hi")){
-						docName = "\\EnglishtoHindi.docx";
+						docName = "EnglishtoHindi.docx";
 						docTrans = "EnglishtoHindi";
 					}else if(languagetype.equals("zh-Hans")){
-						docName = "\\EnglishtoChinese.docx";
+						docName = "EnglishtoChinese.docx";
 						docTrans = "EnglishtoChinese";
 					}else if(languagetype.equals("ar")){
-						docName = "\\EnglishtoArabic.docx";
+						docName = "EnglishtoArabic.docx";
 						docTrans = "EnglishtoArabic";
 					}else if(languagetype.equals("it")){
-						docName = "\\EnglishtoItalian.docx";
+						docName = "EnglishtoItalian.docx";
 						docTrans = "EnglishtoItalian";
 					}else if(languagetype.equals("vi")){
-						docName = "\\EnglishtoVietnamese.docx";
+						docName = "EnglishtoVietnamese.docx";
 						docTrans = "EnglishtoVietnamese";
 					} 
-					
+					System.out.println(" relativePath===docName = "+relativePath+docName);	
 					XWPFDocument document = new XWPFDocument();
 					FileOutputStream out = new FileOutputStream(new File(relativePath+docName));
 					XWPFParagraph paragraph1 = document.createParagraph();

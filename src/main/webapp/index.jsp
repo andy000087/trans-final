@@ -55,7 +55,7 @@ Please enter content to translate:<textarea id="say-hello-text-input" name="sour
 		  if(EnglishtoChinese != null){
 		  %>
 		  <tr>
-		    <td>Chinese A</td>
+		    <td>Chinese</td>
 		    <td><a href='EnglishtoChinese.docx' download>EnglishtoChinese.docx</a></td>
 		  </tr>
 		  <% }%>
