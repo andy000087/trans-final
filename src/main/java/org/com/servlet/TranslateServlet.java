@@ -51,7 +51,13 @@ public class TranslateServlet extends HttpServlet{
 			
 			String sourcecontent = request.getParameter("sourcecontent");
 			String allLang = request.getParameter("allLang");
+			String language = request.getParameter("language");
 			System.out.println("allLang = " + allLang);
+			System.out.println("language = " + language);
+			
+			if(allLang.isEmpty()) {
+				allLang = "hi,zh-Hans,ar,it,vi";
+			}
 			url = url+allLang;
 			System.out.println("url = " + url);
 			
