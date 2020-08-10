@@ -56,7 +56,7 @@ public class TranslateServlet extends HttpServlet{
 			System.out.println("language = " + language);
 			
 			if(allLang.isEmpty()) {
-				allLang = "hi,zh-Hans,ar,it,vi";
+				allLang = "hi,zh-Hans,ar,it,vi,el";
 			}
 			url = url+allLang;
 			System.out.println("url = " + url);
@@ -109,6 +109,9 @@ public class TranslateServlet extends HttpServlet{
 					}else if(languagetype.equals("vi")){
 						docName = "EnglishtoVietnamese.docx";
 						docTrans = "EnglishtoVietnamese";
+					}else if(languagetype.equals("el")){
+						docName = "EnglishtoGreek.docx";
+						docTrans = "EnglishtoGreek";
 					} 
 					System.out.println(" relativePath===docName = "+relativePath+docName);	
 					XWPFDocument document = new XWPFDocument();

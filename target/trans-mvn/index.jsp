@@ -46,16 +46,13 @@
 			<select class="selectpicker" id="language" name="language" multiple >
 			  <option value="ar">Arabic</option>
 			  <option value="zh-Hans">Chinese</option>
+			  <option value="el">Greek</option>
 			  <option value="hi">Hindi</option>
 			  <option value="it">Italian</option>
 			  <option value="vi">Vietnamese</option>
 			</select>
-			
 		</div>
-		
-		
-				
-  		<input class="button" type="submit" id="say-hello-button" value="Translate" onclick="getSelectedValues()" /></div>
+		<input class="button" type="submit" id="say-hello-button" value="Translate" onclick="getSelectedValues()" /></div>
 </form>
 
 <form>
@@ -82,6 +79,16 @@
 		  <tr>
 		    <td>Chinese</td>
 		    <td><a href='EnglishtoChinese.docx' download>EnglishtoChinese.docx</a></td>
+		  </tr>
+		  <% }%>
+		  
+		  <%
+		  String EnglishtoGreek = (String) request.getAttribute("EnglishtoGreek");
+		  if(EnglishtoGreek != null){
+		  %>
+		  <tr>
+		    <td>Greek</td>
+		    <td><a href='EnglishtoGreek.docx' download>EnglishtoGreek.docx</a></td>
 		  </tr>
 		  <% }%>
 		  
