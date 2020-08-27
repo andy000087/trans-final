@@ -39,7 +39,7 @@ import java.io.FileNotFoundException;  // Import this class to handle errors
 @WebServlet("/service") 
 public class TranslateServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		String subscriptionKey = "c03d41b12ca04b6bba9a17a6a2433db3";
+		String subscriptionKey = "e14b9c1d098f402bb6518cd2f2b3a152";
 	    String url = "https://api.cognitive.microsofttranslator.com//translate?api-version=3.0&to=";
 
 	    OkHttpClient client = new OkHttpClient();
